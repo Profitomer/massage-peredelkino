@@ -1,0 +1,40 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+interface Props { title: string; description: string; canonicalPath?: string }
+const { title, description, canonicalPath } = Astro.props;
+const origin = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, origin);
+const schema = {
+  '@context': 'https://schema.org', '@type': 'LocalBusiness',
+  name: 'Массаж Переделкино', description: 'Классический и оздоровительный массаж в Ново-Переделкино.',
+  telephone: '+7-985-979-08-79', url: origin.toString(),
+  address: { '@type':'PostalAddress', streetAddress:'Боровское шоссе, 27, 2 этаж', addressLocality:'Москва', addressCountry:'RU' },
+  sameAs: ['https://t.me/pro_massage_legko']
+};
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#26433d" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.toString()} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical.toString()} />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Массаж Переделкино: блог" />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="#main" class="skip">Перейти к содержанию</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog', ({data}) => !data.draft)).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const fmt = new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'long',year:'numeric'});
+---
+<BaseLayout title="Блог о массаже | Массаж Переделкино" description="Статьи о классическом массаже, подготовке к сеансу, комфорте и расслаблении.">
+  <section class="page-hero"><div class="wrap"><p class="eyebrow">Блог</p><h1>Просто о массаже</h1><p>Практичные ответы на вопросы, которые возникают до и после сеанса.</p></div></section>
+  <section class="section"><div class="wrap blog-grid">
+    {posts.map(post=><a href={'/blog/'+post.id+'/'} class="post-card"><div class="post-art" aria-hidden="true"></div><div class="post-info"><span class="post-date">{fmt.format(post.data.pubDate)}</span><h2>{post.data.title}</h2><p>{post.data.description}</p><span class="text-link">Читать →</span></div></a>)}
+  </div></section>
+</BaseLayout>
