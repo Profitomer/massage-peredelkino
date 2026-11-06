@@ -1,36 +1,69 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const services = [
+  {id:'spina',name:'Классический массаж спины',duration:'45 минут',price:'3 000 ₽',detail:'Если хочется уделить внимание прежде всего спине.'},
+  {id:'sheya',name:'Массаж шейно-воротниковой зоны и рук',duration:'45–60 минут',price:'3 000 ₽',detail:'Работа с шейно-воротниковой зоной и руками.'},
+  {id:'poyasnitsa',name:'Массаж поясницы и ног',duration:'45–60 минут',price:'3 000 ₽',detail:'Пояснично-крестцовая область, ноги и стопы по протоколу.'},
+  {id:'telo',name:'Классический общий массаж',duration:'1,5–2 часа',price:'5 000 ₽',detail:'Последовательная работа с телом по протоколу общего массажа.'}
+];
 ---
-<BaseLayout title="Массаж в Переделкино — классический и оздоровительный | Массаж Переделкино" description="Классический массаж по личному прайсу Павла в Ново-Переделкино: Боровское шоссе, 27, арендованный кабинет в студии «Чистый ритм».">
+<BaseLayout title="Павел — классический массаж в Ново-Переделкино | Цены и запись" description="Классический и оздоровительный массаж у Павла: как проходит сеанс, что входит в услуги, цены от 3 000 ₽, противопоказания и запись. Москва, Боровское шоссе, 27.">
   <section class="hero"><div class="wrap hero-grid">
-    <div><p class="eyebrow">Ново-Переделкино · Москва</p><h1>Массаж<br /><em>рядом.</em><br />Время для себя.</h1>
-      <p class="hero-lead">Классический и оздоровительный массаж в отдельном кабинете студии «Чистый ритм». Спокойная обстановка, внимание к вашим ощущениям и удобное расположение.</p>
-      <div class="buttons"><a href="tel:+79859790879" class="button button-primary">Записаться на массаж ↗</a><a href="/uslugi/" class="text-link">Посмотреть услуги</a></div>
-      <p class="hero-note">Москва, Боровское шоссе, 27 · 2-й этаж</p>
+    <div>
+      <p class="eyebrow">Павел · Массаж в Ново-Переделкино</p>
+      <h1>Помогаю телу <em>расслабиться.</em></h1>
+      <p class="hero-lead">Классический и оздоровительный массаж. Помогаю телу расслабиться и нервной системе снизить восприятие боли. Без обещаний «вылечить всё» и без необходимости терпеть сильную боль ради результата.</p>
+      <p><strong>Сначала знакомимся с противопоказаниями, затем обсуждаем ваши ощущения и пожелания.</strong> Вы заранее знаете, как проходит сеанс и сколько он стоит.</p>
+      <div class="buttons"><a href="tel:+79859790879" class="button button-primary">Уточнить время и записаться ↗</a><a href="#prices" class="text-link">Посмотреть цены</a></div>
+      <p class="hero-note">Москва, Боровское шоссе, 27 · 2-й этаж · отдельный кабинет</p>
     </div>
-    <div class="art" role="img" aria-label="Абстрактная иллюстрация спокойствия"><span class="art-label">ПАУЗА<br />ДЛЯ СЕБЯ</span><span class="art-star">✦</span></div>
+    <div class="art" role="img" aria-label="Декоративная иллюстрация"><span class="art-label">МАССАЖ<br />ПАВЕЛ</span><span class="art-star">✦</span></div>
   </div></section>
-  <section class="section section-pale"><div class="wrap">
-    <div class="section-head"><div><p class="eyebrow">Услуги</p><h2>Выберите свой формат</h2></div><a class="text-link" href="/uslugi/">Все услуги →</a></div>
+
+  <section class="section"><div class="wrap">
+    <p class="eyebrow">Что важно знать до записи</p>
+    <h2>Не нужно гадать, подойдёт ли вам массаж</h2>
     <div class="cards">
-      <a href="/uslugi/#spina" class="card"><span class="number">01 /</span><h3>Классический массаж спины</h3><p>45 минут · 3 000 ₽</p><span class="text-link">Подробнее ↗</span></a>
-      <a href="/uslugi/#sheya" class="card"><span class="number">02 /</span><h3>Классический массаж ШВЗ и рук</h3><p>45–60 минут · 3 000 ₽</p><span class="text-link">Подробнее ↗</span></a>
-      <a href="/uslugi/#poyasnitsa" class="card"><span class="number">03 /</span><h3>Классический массаж поясницы и ног</h3><p>45–60 минут · 3 000 ₽</p><span class="text-link">Подробнее ↗</span></a>
-      <a href="/uslugi/#telo" class="card"><span class="number">04 /</span><h3>Классический общий массаж</h3><p>1,5–2 часа · 5 000 ₽</p><span class="text-link">Подробнее ↗</span></a>
+      <div class="card"><span class="number">01 / ПОДХОД</span><h3>Работаю по протоколам</h3><p>У каждого вида классического массажа есть своя последовательность и зоны воздействия. Что именно входит в сеанс, указано в описании услуг.</p></div>
+      <div class="card"><span class="number">02 / КОМФОРТ</span><h3>Ощущения важны</h3><p>Перед началом обсуждаем пожелания и комфортную интенсивность. Во время массажа можно говорить, что подходит, а что нет.</p></div>
+      <div class="card"><span class="number">03 / БЕЗОПАСНОСТЬ</span><h3>Сначала противопоказания</h3><p>До процедуры знакомимся с ограничениями. При противопоказаниях сеанс не проводим; при сомнениях нужна консультация врача.</p><a class="text-link" href="/protivopokazaniya/">Прочитать список →</a></div>
     </div>
   </div></section>
-  <section id="process" class="section"><div class="wrap process-grid">
-    <div><p class="eyebrow">Спокойно и понятно</p><h2>Как проходит первый сеанс</h2><p>Прежде всего знакомим с противопоказаниями и уточняем, безопасно ли проводить сеанс. Затем обсуждаем пожелания и подходящий формат массажа.</p><a href="/blog/kak-prohodit-pervyy-seans/" class="text-link">Подробно о первом визите →</a> <a href="/protivopokazaniya/" class="text-link" style="margin-left:14px">Противопоказания →</a></div>
+
+  <section class="section section-pale"><div class="wrap narrow">
+    <p class="eyebrow">Кто проводит массаж</p>
+    <h2>Меня зовут Павел</h2>
+    <p>Я занимаюсь классическим и оздоровительным массажем. Принимаю в отдельном кабинете на территории студии «Чистый ритм» в Ново-Переделкино.</p>
+    <p>Для меня массаж — не соревнование в силе нажатия. Важно, чтобы человек понимал, что мы делаем, мог сообщать о своих ощущениях и чувствовал себя комфортно во время сеанса.</p>
+    <p><strong>Почему ко мне?</strong> Здесь можно заранее изучить конкретные услуги, их продолжительность, стоимость, последовательность первого визита и противопоказания. Я не обещаю медицинского лечения и не подменяю массажем помощь врача.</p>
+    <p class="muted">Фото и видео реального процесса массажа, а также отзывы клиентов будут добавлены после согласования материалов.</p>
+  </div></section>
+
+  <section id="prices" class="section"><div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Услуги и стоимость</p><h2>Что входит и сколько стоит</h2></div><a class="text-link" href="/uslugi/">Все услуги →</a></div>
+    <div class="cards">
+      {services.map((service,i)=><a href={'/uslugi/#'+service.id} class="card"><span class="number">{String(i+1).padStart(2,'0')} /</span><h3>{service.name}</h3><p>{service.detail}</p><p><strong>{service.duration} · {service.price}</strong></p><span class="text-link">Подробнее →</span></a>)}
+    </div>
+    <p class="muted" style="margin-top:22px">Это личный прайс Павла, а не прайс студии «Чистый ритм».</p>
+  </div></section>
+
+  <section id="process" class="section section-pale"><div class="wrap process-grid">
+    <div><p class="eyebrow">Как всё происходит</p><h2>Первый визит: без неожиданностей</h2><p>Сначала проверяем, можно ли проводить массаж, и только потом переходим к пожеланиям и самой процедуре.</p><a href="/blog/kak-prohodit-pervyy-seans/" class="text-link">Подробно о первом сеансе →</a></div>
     <div class="steps">
-      <div class="step"><strong>01</strong><div><h3>Запись</h3><p>Позвоните администратору и уточните актуальные услуги, время и стоимость.</p></div></div>
-      <div class="step"><strong>02</strong><div><h3>Противопоказания и пожелания</h3><p>Сначала знакомим с противопоказаниями. Затем обсуждаем ваши пожелания и комфортную интенсивность.</p></div></div>
-      <div class="step"><strong>03</strong><div><h3>Массаж</h3><p>Сеанс в отдельном оборудованном кабинете. Вы можете сообщать о своих ощущениях.</p></div></div>
+      <div class="step"><strong>01</strong><div><h3>Знакомство с противопоказаниями</h3><p>До сеанса знакомимся со списком состояний, при которых массаж противопоказан или ограничен.</p></div></div>
+      <div class="step"><strong>02</strong><div><h3>Обсуждение пожеланий</h3><p>Вы рассказываете, какой формат массажа нужен и какая интенсивность для вас комфортна.</p></div></div>
+      <div class="step"><strong>03</strong><div><h3>Массаж</h3><p>Работаю по протоколу выбранной услуги. Во время сеанса можно сообщать о любых неприятных ощущениях.</p></div></div>
     </div>
   </div></section>
-  <section class="section location"><div class="wrap location-grid"><div class="map-art" aria-hidden="true"><span>М</span></div><div>
-    <p class="eyebrow">Локация</p><h2>Рядом с домом. В Переделкино.</h2><p>Павел принимает в отдельном арендованном кабинете на территории студии «Чистый ритм». Услуги и цены на этом сайте относятся к практике Павла, а не к прайсу студии.</p>
-    <p class="address">Москва, Боровское шоссе, 27<br />2-й этаж, студия «Чистый ритм»</p>
-    <a href="/kontakty/" class="text-link">Адрес и контакты →</a>
-  </div></div></section>
-  <section class="cta"><div class="wrap cta-inner"><div><p class="eyebrow">Сделайте паузу</p><h2>Запишитесь на удобное время</h2><p>Администратор подскажет наличие свободных сеансов.</p></div><a href="tel:+79859790879" class="button button-light">Позвонить для записи ↗</a></div></section>
+
+  <section class="section location"><div class="wrap location-grid">
+    <div class="map-art" aria-hidden="true"><span>М</span></div>
+    <div><p class="eyebrow">Где проходит сеанс</p><h2>Ново-Переделкино. Рядом с домом.</h2>
+      <p>Принимаю в отдельном арендованном кабинете на территории студии «Чистый ритм». Услуги и цены на этом сайте относятся к моей личной практике.</p>
+      <p class="address">Москва, Боровское шоссе, 27<br />2-й этаж, студия «Чистый ритм»</p>
+      <a href="/kontakty/" class="text-link">Адрес, карта и контакты →</a>
+    </div>
+  </div></section>
+
+  <section class="cta"><div class="wrap cta-inner"><div><p class="eyebrow">Запись</p><h2>Понятно, что будет. Осталось выбрать время.</h2><p>Позвоните администратору, чтобы уточнить свободное время. Перед визитом ознакомьтесь с противопоказаниями.</p><a href="/protivopokazaniya/" class="text-link">Противопоказания →</a></div><a href="tel:+79859790879" class="button button-light">Позвонить для записи ↗</a></div></section>
 </BaseLayout>
