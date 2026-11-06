@@ -1,27 +1,51 @@
-name: Build Astro site
+name: Build and deploy massage-peredelkino
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: cloudflare-pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-audit --no-fund
-      - run: npm run build
-      - run: |
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build Astro
+        env:
+          SITE_URL: https://massage-peredelkino.pages.dev
+        run: npm run build
+      - name: Verify generated pages
+        run: |
           test -f dist/index.html
           test -f dist/uslugi/index.html
           test -f dist/blog/index.html
           test -f dist/kontakty/index.html
+          test -f dist/blog/kak-prohodit-pervyy-seans/index.html
           test -f dist/rss.xml
           test -f dist/sitemap.xml
+      - name: Publish to Cloudflare Pages
+        if: github.event_name != 'pull_request'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 66201fa262306c3ca665e618e09519d3
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN secret is missing. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          npx --yes wrangler@4 pages deploy dist --project-name=massage-peredelkino --branch=main
