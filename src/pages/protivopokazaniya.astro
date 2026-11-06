@@ -40,7 +40,7 @@ const groups = [
     <p><strong>Важно:</strong> это информационный список для предварительной беседы, а не средство самодиагностики и не медицинское заключение. Он составлен по рабочим документам Павла; исходные категоричные формулировки уточнены, поскольку не каждое указанное заболевание всегда и при любых обстоятельствах запрещает массаж. Википедия дана только для знакомства с терминами и не заменяет консультацию врача.</p>
     {groups.map(group => <section style="margin-top: 50px"><h2>{group.title}</h2><p class="muted">{group.intro}</p>
       {group.items.map((item,i)=><div style="padding: 22px 0; border-bottom: 1px solid var(--line)">
-        <h3 style="margin-bottom: 10px">{i+1}. {item.label}</h3>
+        <h3 style="margin-bottom: 10px">{i+1}. {item.links.length>0 ? <a href={wiki(item.links[0][1])} target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px" title="Открыть справку в Википедии">{item.label} ↗</a> : item.label}</h3>
         <p style="margin-bottom:8px">{item.detail}</p>
         {item.links.length>0 && <p style="font-size:.82rem;color:var(--soft);margin:0">Справка: {item.links.map(([label,slug],j)=><span>{j>0?' · ':''}<a style="text-decoration:underline;text-underline-offset:3px" href={wiki(slug)} target="_blank" rel="noopener noreferrer">{label} ↗</a></span>)}</p>}
       </div>)}
