@@ -41,3 +41,8 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .route-aside .dash-btn{justify-content:center}
 @media(max-width:1050px){.route-grid{grid-template-columns:1fr}.route-directions{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.route-directions{grid-template-columns:1fr}.route-step{padding:12px 14px}}
+
+/* Embedded Telegram directions video */
+.telegram-route-video{width:100%;max-width:100%;min-width:0;overflow:hidden;background:#fff;border-radius:10px}
+.telegram-route-video iframe{max-width:100%!important}
+.route-aside{min-width:0}
