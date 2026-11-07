@@ -46,3 +46,10 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .telegram-route-video{width:100%;max-width:100%;min-width:0;overflow:hidden;background:#fff;border-radius:10px}
 .telegram-route-video iframe{max-width:100%!important}
 .route-aside{min-width:0}
+
+/* Portrait of Pavel */
+.dash-profile{padding:0;display:flex;flex-direction:column;justify-content:initial;background:#eee9df}
+.dash-profile-image{display:block;width:100%;height:245px;object-fit:cover;object-position:center 34%;}
+.dash-profile-info{padding:14px 22px 2px}.dash-profile-info strong{display:block;font-size:1.38rem;margin-top:4px;font-weight:800}.dash-profile-info span{font-size:.75rem;color:var(--soft)}
+.dash-profile .aside-rule{margin:9px 22px}.dash-profile p{margin:0 22px 9px}.dash-profile .dash-arrow{margin:2px 22px 17px}
+@media(max-width:760px){.dash-profile-image{height:290px;object-position:center 32%}}
