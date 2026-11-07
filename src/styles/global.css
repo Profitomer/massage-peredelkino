@@ -28,3 +28,16 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 @media(max-width:760px){.dash-wrap{width:calc(100% - 24px);margin:12px auto;gap:10px}.head-inner{min-height:64px}.menu{gap:12px}.menu a:nth-child(2){display:none}.dash-hero{grid-template-columns:1fr}.dash-hero-main{padding:24px}.dash-hero h1{font-size:clamp(2.15rem,9vw,3.4rem)}.dash-hero-aside{padding:18px 24px}.aside-big{font-size:2.4rem;display:flex;align-items:baseline;gap:12px}.aside-big small{font-size:.85rem}.aside-rule{margin:7px 0}.dash-section{padding:22px}.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.concept-items{grid-template-columns:1fr}.concept-items div{padding:12px 16px}.dash-contact{flex-direction:column;align-items:stretch;gap:20px}.paper-columns{grid-template-columns:1fr}.paper-sheet{padding:18px}.paper-original{font-size:.86rem}.paper-footer{flex-direction:column;align-items:flex-start}.paper-header{align-items:flex-start}.foot-grid{gap:20px}}
 @media(max-width:480px){.menu a:nth-child(3){display:none}.dash-actions{flex-direction:column}.dash-actions .dash-btn{width:100%}.price-grid{grid-template-columns:1fr}.price-tile{min-height:122px}.dash-footline{align-items:flex-start;flex-direction:column}.concept-feature{align-items:flex-start}.paper-header{flex-direction:column;gap:8px}.phone-top{display:none}}
 @media print{.site-header,.footer,.paper-source,.paper-back{display:none!important}.paper-area{max-width:none;margin:0;padding:0}.paper-sheet{box-shadow:none;border:0;padding:10mm}.paper-original{font-size:9pt}.paper-columns{gap:8mm}}
+
+/* Wayfinding panel */
+.route-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}
+.route-directions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.route-step{display:flex;gap:10px;padding:18px;background:#f2f4ef;border:1px solid var(--line);border-radius:12px}
+.route-step>span{font-size:.7rem;font-weight:800;color:#a87947}
+.route-step strong{font-size:.84rem}
+.route-step p{font-size:.77rem;color:var(--soft);line-height:1.48;margin:8px 0 0}
+.route-aside{display:flex;flex-direction:column;gap:10px;padding:18px;background:#f8f0e4;border-radius:12px}
+.route-aside>strong{font-size:.91rem}.route-aside p{font-size:.77rem;color:var(--soft);margin:0}
+.route-aside .dash-btn{justify-content:center}
+@media(max-width:1050px){.route-grid{grid-template-columns:1fr}.route-directions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.route-directions{grid-template-columns:1fr}.route-step{padding:12px 14px}}
