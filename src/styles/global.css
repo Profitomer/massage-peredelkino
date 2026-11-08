@@ -90,3 +90,11 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .dash-readmore{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:11px 17px;background:var(--forest);color:#fff;border-radius:10px;font-size:.8rem;font-weight:800}
 .dash-concept-link:hover .dash-readmore{background:#3a6554}
 .dash-concept-link:focus-visible{outline:3px solid #a87947}
+
+/* Authentic prepared massage room, photographed on site */
+.route-cabinet-photo{margin:0;background:#fffefb;border-radius:10px;overflow:hidden;border:1px solid #dacdb9}
+.route-cabinet-photo a{display:block;overflow:hidden}
+.route-cabinet-photo img{display:block;width:100%;height:clamp(175px,23vw,225px);object-fit:cover;object-position:50% 42%;transition:transform .2s ease}
+.route-cabinet-photo a:hover img{transform:scale(1.025)}
+.route-cabinet-photo figcaption{font-size:.74rem;line-height:1.5;color:var(--soft);padding:10px 12px}
+@media(max-width:760px){.route-cabinet-photo img{height:215px}}
