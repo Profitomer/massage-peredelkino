@@ -67,3 +67,16 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .vitruvian-cat-art{mix-blend-mode:normal;overflow:hidden;border:1px solid #c8ad88;border-radius:12px;background:#f4e5c9;box-shadow:0 4px 18px #6b48201a}
 .vitruvian-cat-art img{height:100%;object-fit:cover;object-position:center}
 .dash-concept{background:linear-gradient(90deg,#fdfbf5ee,#fdfbf5f5),url('/vitruvian-cat-texture.jpg') center/cover no-repeat}
+
+/* Cat illustrations from the owner's 'Котики' folder. Keep all labels fully legible. */
+.price-heading{display:flex;align-items:start;justify-content:space-between;gap:8px;height:52px}
+.price-cat{width:54px;height:54px;object-fit:cover;border-radius:50%;border:1px solid #c8b399;background:#f2ede3;opacity:.9;filter:saturate(.82);box-shadow:0 2px 7px #1d2b1d12}
+.price-tile{position:relative;overflow:hidden}
+.price-tile:nth-child(2){background:#f5eee5}
+.price-tile:nth-child(4){background:#f1eee8}
+.title-cat-stamp{height:40px;width:40px;vertical-align:middle;object-fit:cover;border-radius:50%;margin-left:8px;border:1px solid #d4c8b6}
+.dash-hero-main{position:relative;isolation:isolate}
+.dash-hero-main::before{content:"";position:absolute;z-index:-1;right:8px;top:12px;width:110px;height:110px;background:url('/vitruvian-cat-ink.jpg') center/contain no-repeat;opacity:.065;filter:grayscale(1);pointer-events:none}
+.dash-contact{position:relative;overflow:hidden}
+.dash-contact::after{content:"";width:92px;height:92px;position:absolute;right:26%;bottom:-27px;background:url('/vitruvian-cat-etching.jpg') center/cover no-repeat;opacity:.09;filter:grayscale(1);border-radius:50%;pointer-events:none}
+@media(max-width:480px){.price-heading{height:45px}.price-cat{width:45px;height:45px}.title-cat-stamp{width:32px;height:32px}}
