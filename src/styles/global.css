@@ -80,3 +80,13 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .dash-contact{position:relative;overflow:hidden}
 .dash-contact::after{content:"";width:92px;height:92px;position:absolute;right:26%;bottom:-27px;background:url('/vitruvian-cat-etching.jpg') center/cover no-repeat;opacity:.09;filter:grayscale(1);border-radius:50%;pointer-events:none}
 @media(max-width:480px){.price-heading{height:45px}.price-cat{width:45px;height:45px}.title-cat-stamp{width:32px;height:32px}}
+
+/* The full USP section links to its detailed blog article. */
+.dash-concept-link{display:block;color:inherit;text-decoration:none;border-radius:12px;outline-offset:5px}
+.dash-concept-link:hover{opacity:1}
+.dash-concept-link .concept-feature,.dash-concept-link .concept-items>div{transition:box-shadow .2s ease,border-color .2s ease,transform .2s ease}
+.dash-concept-link:hover .concept-feature,.dash-concept-link:focus-visible .concept-feature{box-shadow:0 6px 18px #7052371a;transform:translateY(-2px)}
+.dash-concept-link:hover .concept-items>div{border-color:#b3a388}
+.dash-readmore{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:11px 17px;background:var(--forest);color:#fff;border-radius:10px;font-size:.8rem;font-weight:800}
+.dash-concept-link:hover .dash-readmore{background:#3a6554}
+.dash-concept-link:focus-visible{outline:3px solid #a87947}
