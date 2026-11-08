@@ -61,3 +61,9 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .concept-cat-feature p{position:relative;z-index:1;font-size:.9rem}
 @media(max-width:760px){.concept-cat-feature{min-height:0}.vitruvian-cat-art{width:35%;min-width:112px}}
 @media(max-width:390px){.concept-cat-feature{gap:8px;padding:14px}.vitruvian-cat-art{min-width:95px}.concept-cat-feature p{font-size:.8rem}}
+
+/* Original cat artworks from user's Drive: vintage paper + understated background */
+.concept-cat-feature{background:linear-gradient(90deg,rgba(251,246,234,.89),rgba(251,246,234,.8)),url('/vitruvian-cat-texture.jpg') center/cover no-repeat}
+.vitruvian-cat-art{mix-blend-mode:normal;overflow:hidden;border:1px solid #c8ad88;border-radius:12px;background:#f4e5c9;box-shadow:0 4px 18px #6b48201a}
+.vitruvian-cat-art img{height:100%;object-fit:cover;object-position:center}
+.dash-concept{background:linear-gradient(90deg,#fdfbf5ee,#fdfbf5f5),url('/vitruvian-cat-texture.jpg') center/cover no-repeat}
