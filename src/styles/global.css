@@ -53,3 +53,11 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .dash-profile-info{padding:14px 22px 2px}.dash-profile-info strong{display:block;font-size:1.38rem;margin-top:4px;font-weight:800}.dash-profile-info span{font-size:.75rem;color:var(--soft)}
 .dash-profile .aside-rule{margin:9px 22px}.dash-profile p{margin:0 22px 9px}.dash-profile .dash-arrow{margin:2px 22px 17px}
 @media(max-width:760px){.dash-profile-image{height:290px;object-position:center 32%}}
+
+/* Vitruvian cat: compact decorative illustration, ready for massage-zone markers */
+.concept-cat-feature{position:relative;overflow:hidden;gap:16px;min-height:205px;background:linear-gradient(135deg,#f5e7d0,#e9dac4);border:1px solid #dcc3a3}
+.vitruvian-cat-art{width:min(47%,220px);aspect-ratio:1;flex:0 0 auto;display:grid;place-items:center;mix-blend-mode:multiply}
+.vitruvian-cat-art img{display:block;width:100%;height:auto;object-fit:contain;opacity:.93}
+.concept-cat-feature p{position:relative;z-index:1;font-size:.9rem}
+@media(max-width:760px){.concept-cat-feature{min-height:0}.vitruvian-cat-art{width:35%;min-width:112px}}
+@media(max-width:390px){.concept-cat-feature{gap:8px;padding:14px}.vitruvian-cat-art{min-width:95px}.concept-cat-feature p{font-size:.8rem}}
