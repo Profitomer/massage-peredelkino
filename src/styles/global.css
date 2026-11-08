@@ -98,3 +98,18 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 .route-cabinet-photo a:hover img{transform:scale(1.025)}
 .route-cabinet-photo figcaption{font-size:.74rem;line-height:1.5;color:var(--soft);padding:10px 12px}
 @media(max-width:760px){.route-cabinet-photo img{height:215px}}
+
+/* Route cards are compact and independent of the taller media column. */
+.route-grid{grid-template-columns:minmax(0,1fr) minmax(310px,.72fr);align-items:start}
+.route-directions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;align-items:start}
+.route-step{height:auto;min-height:0;align-self:start;overflow-wrap:anywhere}
+.route-step>div{min-width:0}
+.route-step strong{line-height:1.4}
+.route-step p strong{font-size:inherit}
+.route-alert{font-weight:800;color:#994e35!important}
+.route-phone{display:inline-block;margin-top:11px;font-size:.82rem;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.route-video-fallback{padding:13px;background:#fffefa;border:1px solid #decfbb;border-radius:10px}
+.route-video-fallback p{margin:0 0 12px;line-height:1.5;color:var(--soft);font-size:.78rem}
+.route-video-fallback .dash-btn{width:100%;justify-content:center}
+@media(max-width:1050px){.route-grid{grid-template-columns:1fr}.route-directions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.route-directions{grid-template-columns:1fr}.route-step{padding:14px}}
