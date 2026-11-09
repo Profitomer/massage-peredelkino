@@ -190,3 +190,25 @@ h1,h2,h3,h4{line-height:1.2;margin-bottom:.35em}
 .route-video-player{width:100%;min-width:0;display:flex;flex-direction:column;gap:8px}
 .route-video-player video{display:block;width:100%;max-width:100%;height:auto;max-height:460px;object-fit:contain;border-radius:10px;background:#141414}
 .route-video-download{align-self:flex-start;font-size:.78rem;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+
+/* Directions: two steps across the top; balanced media row below. */
+.dash-route .route-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.dash-route .route-directions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.dash-route .route-step{min-width:0;height:100%;padding:18px 20px}
+.dash-route .route-aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:16px;padding:0;background:transparent;min-width:0}
+.dash-route .route-cabinet-photo{min-width:0;align-self:stretch;background:#fff;border-radius:12px}
+.dash-route .route-cabinet-photo img{width:100%;height:clamp(250px,27vw,350px);object-fit:cover;object-position:center 45%}
+.dash-route .route-cabinet-photo figcaption{padding:12px 14px;line-height:1.4}
+.dash-route .route-video-card{min-width:0;display:flex;flex-direction:column;gap:10px;padding:14px;background:#f8f0e4;border-radius:12px}
+.dash-route .route-video-card>strong{font-size:.9rem;line-height:1.35}
+.dash-route .route-video-player{gap:7px}
+.dash-route .route-video-player video{display:block;width:100%;height:clamp(250px,27vw,350px);max-height:350px;object-fit:contain;background:#161616}
+.dash-route .route-video-card>.dash-btn{align-self:flex-start;margin-top:auto}
+@media(max-width:760px){
+ .dash-route .route-directions{grid-template-columns:1fr;gap:10px}
+ .dash-route .route-step{padding:14px 16px}
+ .dash-route .route-aside{grid-template-columns:1fr;gap:12px}
+ .dash-route .route-cabinet-photo img{height:245px}
+ .dash-route .route-video-player video{height:auto;max-height:420px;aspect-ratio:16/9}
+ .dash-route .route-video-card{padding:12px}
+}
