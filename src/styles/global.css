@@ -149,3 +149,39 @@ body .dash-btn-outline,body .dash-btn-outline *{color:#000!important}
 @media(max-width:600px){
   .article img{margin:14px auto 22px;border-radius:9px}
 }
+
+/* Compact vertical rhythm site-wide. Preserve readable line lengths and tap targets. */
+body{line-height:1.48}
+p{line-height:1.5;margin-bottom:.65em}
+h1,h2,h3,h4{line-height:1.2;margin-bottom:.35em}
+.section{padding-top:64px;padding-bottom:64px}
+.section-head{margin-bottom:22px}
+.page-hero{padding:34px 0 28px}
+.page-hero h1{line-height:1.12;margin:8px 0 10px}
+.page-hero .eyebrow{margin-bottom:6px}
+.page-hero p:not(.eyebrow){line-height:1.48;margin:0}
+.page-hero .back{margin-bottom:12px}
+.article{padding:18px 0 52px;line-height:1.55}
+.article p,.article li{line-height:1.55}
+.article p{margin:0 0 10px}
+.article h2{font-size:clamp(1.45rem,3vw,1.9rem);line-height:1.22;margin:24px 0 9px}
+.article h3{margin:20px 0 8px}
+.article img{margin:10px auto 17px}
+.article p:has(> img){margin:0 0 10px}
+.article hr{margin:22px 0}
+.article ul,.article ol{margin:10px 0 14px}
+.article li+li{margin-top:4px}
+.list-row{padding:22px 0}
+.card h3{margin-top:18px}
+.paper-header{margin-bottom:12px;padding-bottom:9px}
+.paper-original{line-height:1.36}
+.dash-caption{line-height:1.4}
+.route-step p{line-height:1.38;margin-top:5px}
+@media(max-width:760px){
+ .page-hero{padding:24px 0 20px}
+ .page-hero h1{font-size:clamp(2rem,7vw,3rem);line-height:1.13}
+ .article{padding:16px 0 38px}
+ .article h2{margin:20px 0 8px}
+ .section{padding-top:40px;padding-bottom:40px}
+ .article img{margin:9px auto 13px}
+}
