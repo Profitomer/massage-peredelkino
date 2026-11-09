@@ -185,3 +185,8 @@ h1,h2,h3,h4{line-height:1.2;margin-bottom:.35em}
  .section{padding-top:40px;padding-bottom:40px}
  .article img{margin:9px auto 13px}
 }
+
+/* Self-hosted directions video, responsive within its sidebar. */
+.route-video-player{width:100%;min-width:0;display:flex;flex-direction:column;gap:8px}
+.route-video-player video{display:block;width:100%;max-width:100%;height:auto;max-height:460px;object-fit:contain;border-radius:10px;background:#141414}
+.route-video-download{align-self:flex-start;font-size:.78rem;font-weight:800;text-decoration:underline;text-underline-offset:3px}
