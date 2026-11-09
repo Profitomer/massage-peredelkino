@@ -122,3 +122,15 @@ body .dash-btn-outline,body .dash-btn-outline *{color:#000!important}
 
 /* Readable body text inside the document's non-paragraph containers. */
 .paper-original,.paper-original *{color:#000!important}
+
+/* Separate article links in the massage + movement section */
+.concept-feature-link{color:#000;text-decoration:none;outline-offset:4px}
+.concept-feature-link:hover,.concept-feature-link:focus-visible{box-shadow:0 6px 18px #7052371a;transform:translateY(-2px)}
+.concept-items>.concept-article-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:7px;color:#000;text-decoration:none;min-width:0;outline-offset:3px;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.concept-items>.concept-article-card:hover,.concept-items>.concept-article-card:focus-visible{border-color:#8d7255;box-shadow:0 7px 22px #70523720;transform:translateY(-2px)}
+.concept-article-thumb{display:block;width:100%;height:116px;object-fit:contain;object-position:center;border-radius:7px}
+.concept-items>.concept-article-card strong{font-size:.9rem;line-height:1.3;color:#000}
+.concept-items>.concept-article-card span{font-size:.77rem;line-height:1.4;color:#000}
+.concept-items>.concept-article-card .concept-article-read{font-size:.7rem;font-weight:800;text-decoration:underline;text-underline-offset:2px}
+.dash-concept>.dash-readmore{text-decoration:none}
+@media(max-width:760px){.concept-article-thumb{height:124px}.concept-items>.concept-article-card{padding:14px 16px}}
