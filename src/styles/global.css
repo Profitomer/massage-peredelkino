@@ -114,28 +114,8 @@ body{background:#ecefe9}p{line-height:1.5}.site-header{position:sticky;top:0;z-i
 @media(max-width:1050px){.route-grid{grid-template-columns:1fr}.route-directions{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.route-directions{grid-template-columns:1fr}.route-step{padding:14px}}
 
-/* Accessible contrast on all light site surfaces, 2026-11-09.
-   Preserve light text only on genuinely dark controls and footer. */
-:root{--ink:#151a17;--soft:#303832}
-body{color:var(--ink)}
-.dash-panel,.dash-section,.dash-hero-main,.dash-hero-aside,.price-tile,
-.concept-feature,.concept-items>div,.route-step,.route-aside,
-.contact-box,.paper-sheet,.post-info,.article,.page-hero{
-  color:var(--ink);
-}
-.dash-kicker,.dash-side-note,.dash-caption,.dash-micro,.dash-footline,
-.dash-hero-aside p,.dash-profile-info span,.price-index,.price-footer span,
-.concept-items span,.route-step p,.route-aside p,.route-cabinet-photo figcaption,
-.route-video-fallback p,.dash-contact p,.post-info p,.article p,
-.hero-note,.hero-lead,.page-hero p:not(.eyebrow),.muted,
-.paper-footer,.paper-source,.foot-note{
-  color:#303832;
-}
-.concept-feature p,.concept-items strong,.dash-title h2,
-.route-step strong,.price-tile h3{color:#141914}
-.dash-btn:not(.dash-btn-outline),.phone-top,.button-primary,.dash-readmore,
-.dash-concept-link .dash-readmore{color:#fff}
-.dash-btn-outline,.dash-btn-outline:hover{color:#162c22}
-.footer,.footer h2,.footer b{color:#f4f7f4}
-.footer p,.footer a,.foot-note{color:#e2ebe4}
-.contact-box.dark,.contact-box.dark p{color:#fff}
+
+/* Strict contrast: black for standard text, white for dark surfaces. */
+body,body p,body span,body strong,body small,body a,body h1,body h2,body h3,body figcaption{color:#000!important}
+body .footer,body .footer *,body .cta,body .cta *,body .contact-box.dark,body .contact-box.dark *,body .dash-btn:not(.dash-btn-outline),body .dash-btn:not(.dash-btn-outline) *,body .phone-top,body .phone-top *,body .dash-readmore,body .dash-readmore *,body .button-primary,body .button-primary *,body .logo-glyph{color:#fff!important}
+body .dash-btn-outline,body .dash-btn-outline *{color:#000!important}
