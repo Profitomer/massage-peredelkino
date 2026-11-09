@@ -134,3 +134,18 @@ body .dash-btn-outline,body .dash-btn-outline *{color:#000!important}
 .concept-items>.concept-article-card .concept-article-read{font-size:.7rem;font-weight:800;text-decoration:underline;text-underline-offset:2px}
 .dash-concept>.dash-readmore{text-decoration:none}
 @media(max-width:760px){.concept-article-thumb{height:124px}.concept-items>.concept-article-card{padding:14px 16px}}
+
+/* Article illustrations must stay within the reading column on every screen. */
+.article img{
+  display:block;
+  max-width:100%;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  margin:18px auto 28px;
+  border-radius:12px;
+}
+.article p:has(> img){margin:0;max-width:100%;overflow:hidden}
+@media(max-width:600px){
+  .article img{margin:14px auto 22px;border-radius:9px}
+}
